@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="FluentValidation" Version="8.0.101" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.1.1" />
+    <PackageReference Include="Scrutor" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kts.RefactorThis.Application\Kts.RefactorThis.Application.csproj" />
+    <ProjectReference Include="..\Kts.RefactorThis.Common\Kts.RefactorThis.Common.csproj" />
+    <ProjectReference Include="..\Kts.RefactorThis.DataAccess\Kts.RefactorThis.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

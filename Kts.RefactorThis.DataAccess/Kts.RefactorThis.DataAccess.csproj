@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.5" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kts.RefactorThis.Application.Abstractions\Kts.RefactorThis.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\Kts.RefactorThis.Application\Kts.RefactorThis.Application.csproj" />
+    <ProjectReference Include="..\Kts.RefactorThis.Common\Kts.RefactorThis.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="SQLStatements.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SQLStatements.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="SQLStatements.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SQLStatements.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

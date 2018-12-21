@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="FluentValidation" Version="8.0.101" />
+    <PackageReference Include="HtmlSanitizer" Version="4.0.199" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kts.RefactorThis.Application.Abstractions\Kts.RefactorThis.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\Kts.RefactorThis.Common\Kts.RefactorThis.Common.csproj" />
+  </ItemGroup>
+
+</Project>

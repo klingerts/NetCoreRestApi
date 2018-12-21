@@ -1,0 +1,35 @@
+﻿@startuml
+
+node "RefactorThis " {
+    component "**Api**\n(Asp.Net Core 2.1)" AS Api
+    component "**Application**" AS App
+    component "**Abstractions**" AS Abs
+    component "**Common**" AS Common
+    component "**Setup**" AS Setup
+    component "***DataAccess**\n>Dapper" AS DA
+}
+
+node "Tests " {
+    [Integration]
+    [Unit]
+}
+
+database "SQL Server\n" {
+   [Database]
+}
+
+Api -down-> App
+Api -down-> Setup
+App -down-> Abs
+Api -down-> Common
+Setup -down-> Common
+App -down-> Common
+DA -down-> Common
+DA -up-> App
+DA -up-> Abs
+DA ..> [Database]
+Setup -right-> App
+Setup -right-> Abs
+Setup -left-> DA
+
+@enduml
